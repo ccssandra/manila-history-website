@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manila in 1872</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Georgia', serif;
+            margin: 0;
+            padding: 0;
+            background: #9c6a48;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        /* Header */
+        header {
+            background: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 20px;
+            text-align: center;
+            font-size: 28px;
+            font-weight: bold;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        /* Navigation */
+        nav {
+            display: flex;
+            justify-content: center;
+            background: #5a4637;
+            padding: 10px;
+            position: fixed;
+            width: 100%;
+            top: 60px;
+            z-index: 1000;
+        }
+
+a {
+            text-decoration: none !important;  
+            color: inherit;          }
+
+       nav a {
+            color: white;
+            padding: 10px 20px;
+            font-size: 18px;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            background: #c7a17a;
+            border-radius: 5px;
+        }
+
+        /* Table Layout */
+        .table-container {
+            width: 100%;
+            margin-top: 120px;
+            padding: 10px 0;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 80%; 
+        }
+
+        td {
+            padding: 10px;
+            text-align: center;
+            width: 33.33%; 
+        }
+
+        /* Place Cards */
+        .place {
+            background: url(oldpaper2.jpg) no-repeat center/cover;
+            padding: 10px;
+            border-radius: 10px;
+            box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+            transition: 0.3s;
+            color: black;
+            text-decoration: none;
+            font-size: 18px;
+            transition: 0.3s;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .place:hover {
+            transform: scale(1.03);
+        }
+
+        .place img {
+            width: 100%;
+            height: 200px; 
+            object-fit: cover; 
+            border-radius: 5px;
+            filter: sepia(50%);
+            transition: 0.3s;
+        }
+
+        .place img:hover {
+            filter: sepia(0%);
+        }
+
+        .description {
+            padding: 10px;
+            font-size: 18px;
+            color: #5a4637;
+        }
+
+#hotel-booking {
+    background: #f4f4f4;
+    padding: 40px;
+    text-align: center;
+}
+
+.booking-container h2 {
+    font-size: 2em;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.booking-container p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+    color: #555;
+}
+
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+form label {
+    font-size: 1.1em;
+    display: block;
+    margin-bottom: 8px;
+    color: #555;
+}
+
+form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+form input[type="date"] {
+    padding: 8px;
+}
+
+.book-button {
+    background-color: #5a4637;
+    color: white;
+    font-size: 1.2em;
+    padding: 15px 25px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.book-button:hover {
+    background-color: #c7a17a;
+}
+
+ /* Carousel Section */
+        #streets {
+            background-color: #f9f9f9;
+            padding: 40px;
+            text-align: center;
+            margin-top: 120px;
+        }
+
+        #streets h2 {
+            font-size: 2em;
+            color: #333;
+            margin-bottom: 30px;
+        }
+
+        .carousel {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .carousel-track {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .carousel-item {
+            flex: 0 0 80%;
+            max-width: 80%;
+            margin: 0 10px;
+            background: #fff;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .carousel-item:hover {
+            transform: scale(1.05);
+        }
+
+        .carousel-item img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 10px;
+            filter: sepia(50%);
+            transition: 0.3s;
+        }
+
+        .carousel-item img:hover {
+            filter: sepia(0%);
+        }
+
+        .carousel-item h3 {
+            font-size: 1.8em;
+            color: #5a4637;
+            margin-top: 15px;
+        }
+
+        .carousel-item p {
+            font-size: 1.1em;
+            color: #333;
+        }
+
+        /* Navigation Arrows */
+        .carousel-prev, .carousel-next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            font-size: 2em;
+            padding: 10px;
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .carousel-prev {
+            left: 10px;
+        }
+
+        .carousel-next {
+            right: 10px;
+        }
+
+        .carousel-prev:hover, .carousel-next:hover {
+            background-color: #c7a17a;
+        }
+
+        /* Footer */
+        footer {
+            background: #5a4637;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 50px;
+        }
+
+    </style>
+</head>
+<body>
+<img src="1.png" height="800" width="1351">
+<img src="2.png" height="800" width="1351">
+<img src="3.png" height="800" width="1351">
+<header>
+    Discover Manila: Where History Lives
+</header>
+
+<nav>
+
+    <a href="website.html">Home</a>    
+    <a href="maps.html">Maps</a>
+    <a href="hotel.html">Hotel</a>
+    <a href="restaurant.html">Restaurant</a>
+    <a href="#luneta">FAQ</a>
+</nav>
+
+<br>
+<br>
+<br>
+<Font size=7><b><center> Manila's Historic Landmarks
+</font></center>
+
+<center>
+<div class="table-container">
+    
+<table>
+        
+<tr>
+            
+<td>
+	<a href="intra.html">
+	<div class="place">
+	<img src="intraa.jpg" alt="Intramuros">
+	<h2>Intramuros</h2>
+	</div></a></td>
+           
+<td>
+	<a href="luneta.html">
+	<div class="place">
+	<img src="rizal.jpg" alt="Rizal Park">
+	<h2>Rizal Park</h2>
+	</div></a></td>
+           
+ <td>
+
+	<a href="fort.html">
+	<div class="place">
+	<img src="fort.jpg" alt="Intramuros">
+	<h2>Fort Santiago</h2>
+	</div></a></td>
+<tr>
+
+<td>
+	<a href="cori.html">
+	<div class="place">
+	<img src="corregidor.jpg" alt="Intramuros">
+	<h2>Corregidor Island</h2>
+	</div></a></td>
+           
+<td>
+	<a href="mala.html">
+	<div class="place">
+	<img src="palace.jpg" alt="Intramuros">
+	<h2>Malacañang Palace</h2>
+	</div></a></td>
+
+<td>
+	<a href="people.html">
+	<div class="place">
+	<img src="ppm.jpg" alt="Intramuros">
+	<h3>People Power Monument</h3>
+	</div></a></td>    
+
+</table>
+</div>
+
+<section id="hotel-booking">
+    <div class="booking-container">
+        <h2>Book Your Stay in Manila</h2>
+        <p>Looking for the perfect hotel in Manila? Let us help you find the best deals on accommodation. Whether you're looking for luxury, comfort, or budget-friendly options, we've got you covered.</p>
+        
+        <form action="https://www.manila-hotel.com.ph/?sjrncid=GA_17338201157&sjrnaid=GA_689250238692&gad_source=1&gclid=Cj0KCQjw4cS-BhDGARIsABg4_J18jxtA7SZgr9QCKbj0cp5vVXFOYrCrbnJqjcqgKCQZiU_FO-YIZvAaAvdfEALw_wcB&gclsrc=aw.ds" method="get">
+            <label for="location">Destination:</label>
+            <input type="text" id="location" name="location" placeholder="Manila, Philippines" required>
+
+            <label for="check-in">Check-in Date:</label>
+            <input type="date" id="check-in" name="check-in" required>
+
+            <label for="check-out">Check-out Date:</label>
+            <input type="date" id="check-out" name="check-out" required>
+
+            <label for="guests">Guests:</label>
+            <input type="number" id="guests" name="guests" min="1" required>
+
+            <button type="submit" class="book-button">Find Hotels</button>
+        </form>
+    </div>
+</section>
+
+
+
+
+
+
+
+
+
+<footer>
+    &copy; 2025 Manila History. All rights reserved.
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manila in 1872</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Georgia', serif;
+            margin: 0;
+            padding: 0;
+            background: #9c6a48;
+            background-repeat: no-repeat;
+            background-size: cover;
+            color: #333;
+        }
+
+        /* Header */
+        header {
+            background: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 20px;
+            text-align: center;
+            font-size: 28px;
+            font-weight: bold;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        /* Navigation */
+        nav {
+            display: flex;
+            justify-content: center;
+            background: #5a4637;
+            padding: 10px;
+            position: fixed;
+            width: 100%;
+            top: 60px;
+            z-index: 1000;
+        }
+
+        nav a {
+            color: white;
+            padding: 10px 20px;
+            font-size: 18px;
+            transition: 0.3s;
+            text-decoration: none;
+        }
+
+        nav a:hover {
+            background: #c7a17a;
+            border-radius: 5px;
+        }
+
+        /* Hotel Section */
+        #hotel-booking {
+            background: url(oldpaper2.jpg) no-repeat center/cover;
+            background-size: cover;
+            padding: 40px 20px;
+            border-radius: 10px;
+            text-align: center;
+            margin-top: 120px;
+        }
+
+        .booking-container h2 {
+            font-size: 2.5em;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .booking-container p {
+            font-size: 1.2em;
+            margin-bottom: 30px;
+            color: #555;
+        }
+
+        .hotel-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .hotel-card {
+            background: white;
+            width: 280px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .hotel-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .hotel-card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 8px;
+            transition: 0.3s;
+        }
+
+        .hotel-card h3 {
+            font-size: 1.5em;
+            margin: 15px 0;
+            color: #333;
+        }
+
+        .hotel-card p {
+            font-size: 1.1em;
+            margin-bottom: 20px;
+            color: #666;
+        }
+
+        .book-button {
+            background-color: #5a4637;
+            color: white;
+            font-size: 1.2em;
+            padding: 15px 25px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .book-button:hover {
+            background-color: #c7a17a;
+        }
+
+        /* Footer */
+        footer {
+            background: #5a4637;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 50px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <header>
+        Discover Manila: Where History Lives
+    </header>
+
+    <nav>
+    <a href="website.html">Home</a>    
+    <a href="maps.html">Maps</a>
+    <a href="hotel.html">Hotel</a>
+    <a href="restaurant.html">Restaurant</a>
+    <a href="#luneta">FAQ</a>
+    </nav>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+    <div class="booking-container">
+        <center><h2>Suggested Hotels in Manila</h2>
+        <p><font color="black">Discover the best of Manila with these top hotels, offering comfort, luxury, and convenience for an unforgettable stay in the heart of the city!</p></font></center>
+
+        <div class="hotel-list">
+            <div class="hotel-card">
+                <img src="diamond.jpg" alt="Diamond Hotel">
+                <h3>Diamond Hotel</h3>
+                <p>Retreat with stunning bay views, elegant rooms, and world-class amenities. Book your unforgettable stay now!</p>
+                <a href="https://diamondhotel.com/" target="_blank">
+                    <button class="book-button">Book Now</button>
+                </a>
+            </div>
+
+            <div class="hotel-card">
+                <img src="rphotel.jpg" alt="Rizal Park Hotel">
+                <h3>Rizal Park Hotel</h3>
+                <p>Comfortable and affordable stay near Rizal Park, perfect for tourists exploring the city.</p>
+                <a href="https://www.rizalparkhotel.com" target="_blank">
+                    <button class="book-button">Book Now</button>
+                </a>
+            </div>
+
+            <div class="hotel-card">
+                <img src="hyatt.jpg" alt="Manila Grand Hyatt">
+                <h3>Manila Grand Hyatt</h3>
+                <p>Luxury hotel offering world-class amenities and breathtaking city views.</p>
+                <a href="https://www.hyatt.com/grand-hyatt/en-US/mangh-grand-hyatt-manila/offers?src=corp_aspac_corp_aspac_sem_dap_google_br_Corporate_Search_Google_ASPAC_ASPAC_Worldwide-PH_BR_AO_WW-PH_EN_Rooms_MANGH_BR_Exact_PROP_WW-PH_EN_Manila+Grand+Hyatt&gad_source=1&gclid=Cj0KCQjw4cS-BhDGARIsABg4_J0SEfnYF_PaqF4CXxkQbqiGwQqp2noHosWueLchXg4WmHfd8yDh-pkaAnh1EALw_wcB&gclsrc=aw.ds" target="_blank">
+                    <button class="book-button">Book Now</button>
+                </a>
+            </div>
+ <div class="hotel-card">
+                <img src="bay.jpg" alt="Diamond Hotel">
+                <h3>Bayview Park Hotel</h3>
+                <p>Escape to Bayview Park Hotel for stunning Manila Bay views, cozy rooms, and exceptional service—all in one perfect stay!</p>
+                <a href="https://bayviewparkhotel.com/" target="_blank">
+                    <button class="book-button">Book Now</button>
+                </a>
+            </div>
+
+
+
+
+
+
+
+
+<div class="hotel-list">
+            <div class="hotel-card">
+                <img src="coast.jpg" alt="Diamond Hotel">
+                <h3>New Coast Hotel</h3>
+                <p>Discover luxury and comfort at New Coast Hotel, offering elegant rooms, world-class amenities, and a prime location in the heart of Manila!
+
+
+
+</p>
+                <a href="https://www.newcoasthotels.com/" target="_blank">
+                    <button class="book-button">Book Now</button>
+                </a>
+            </div>
+
+            <div class="hotel-card">
+                <img src="red.jpg" alt="Rizal Park Hotel">
+                <h3>The Manila Hotel</h3>
+                <p>Experience timeless elegance at The Manila Hotel, where rich history, luxurious accommodations, and exceptional service come together for an unforgettable stay.
+
+
+
+</p>
+                <a href="https://www.manila-hotel.com.ph/?sjrncid=GA_17338201157&sjrnaid=GA_689341658087&gad_source=1&gclid=Cj0KCQjw4cS-BhDGARIsABg4_J1wpVw0TIaRKxdBKkcDeEgJ5-AefHunWNCJV7-cx8OcG4Ebi4DpzREaApXCEALw_wcB&gclsrc=aw.ds" target="_blank">
+                    <button class="book-button">Book Now</button>
+                </a>
+            </div>
+
+            <div class="hotel-card">
+                <img src="grand.jpg" alt="Manila Grand Hyatt">
+                <h3>Manila Grand Opera Hotel</h3>
+                <p>Enjoy a blend of comfort and culture at Manila Grand Opera Hotel, offering stylish rooms, modern amenities, and a prime location near the city's vibrant attractions.</p>
+                <a href="https://www.manilagrandopera.com/" target="_blank">
+                    <button class="book-button">Book Now</button>
+                </a>
+            </div>
+ <div class="hotel-card">
+                <img src="sogo.jpg" alt="Diamond Hotel">
+                <h3>Hotel Sogo</h3>
+                <p>Offers a comfortable and budget-friendly stay with convenient locations, ideal for both short breaks and longer stays in the heart of the city.
+So Clean. So Good.</p>
+                <a href="https://www.hotelsogo.com/branches/lrt-monumento" target="_blank">
+                    <button class="book-button">Book Now</button>
+                </a>
+            </div>
+
+
+
+        </div>
+    </div>
+
+<footer>
+    &copy; 2025 Manila History. All rights reserved.
+</footer>
+
+</body>
+</html>
